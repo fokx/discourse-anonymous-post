@@ -16,3 +16,7 @@ Greatly inspired and helped by
 and 
 [muhlisbc/discourse-scheduled-reply-plugin](https://github.com/muhlisbc/discourse-scheduled-reply-plugin). 
 Thanks go to their authors :heart:.
+
+## Note
+I don't know why, but this plugin doesn't work when [paviliondev/discourse-events](https://github.com/paviliondev/discourse-events) 
+is installed and enabled.
