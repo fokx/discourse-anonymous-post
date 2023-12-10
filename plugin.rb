@@ -38,6 +38,11 @@ after_initialize do
       return if post.blank?
       topic_id = post.topic.id
       raw = post.raw
+      if post.reply_to_post_number
+        reply_to_post_number = post.reply_to_post_number
+      else
+        reply_to_post_number = 1
+      end
       post.destroy
       post.publish_change_to_clients! :deleted
       return if post.deleted_at.present?
@@ -48,6 +53,7 @@ after_initialize do
       PostCreator.create!(
         anonymous_post_user,
         topic_id: topic_id,
+        reply_to_post_number: reply_to_post_number,
         raw: raw
       )
 
