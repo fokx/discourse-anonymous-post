@@ -1,0 +1,13 @@
+{{#if siteSettings.anonymous_post_enabled}}
+      {{#if (sr-eq args.model.action "reply")}}
+        {{#if (sr-eq args.model.archetypeId "regular")}}
+          {{d-button
+            action=(action "anonymousReply")
+            translatedLabel=(i18n "anonymous_post.btn_label")
+            disabled=composer.disableSubmit
+            class="btn-primary anonymous-post-button"
+            icon="ghost"
+          }}
+        {{/if}}
+      {{/if}}
+{{/if}}

@@ -1,0 +1,8 @@
+plugins:
+  anonymous_post_enabled:
+    default: true
+    client: true
+  anonymous_post_user:
+    client: true
+    type: username
+    default: anonymous
