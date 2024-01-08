@@ -1,4 +1,4 @@
-{{#if siteSettings.anonymous_post_enabled}}
+{{#if Discourse.SiteSettings.anonymous_post_enabled}}
       {{#if (sr-eq args.model.action "reply")}}
         {{#if (sr-eq args.model.archetypeId "regular")}}
           {{d-button
